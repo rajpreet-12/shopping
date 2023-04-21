@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3d7933ab6",
+  "policyUUID": "d7933ab6",
+  "bucketName": "shopping821a28cff1f1445ca0b76df9333660bc",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
