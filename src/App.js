@@ -49,6 +49,7 @@ const App = ({ signOut }) => {
       name: form.get("name"),
       description: form.get("description"),
       image: image.name,
+      price:form.get("itemprice")
     };
     if (!!data.image) await Storage.put(data.name, image);
     await API.graphql({
@@ -77,17 +78,25 @@ const App = ({ signOut }) => {
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
           <TextField
-            name="name"
-            placeholder="Note Name"
-            label="Note Name"
+            name="itemname"
+            placeholder="Item Name"
+            label="Item Name"
             labelHidden
             variation="quiet"
             required
           />
           <TextField
-            name="description"
-            placeholder="Note Description"
-            label="Note Description"
+            name="itemdescription"
+            placeholder="Item Description"
+            label="Item Description"
+            labelHidden
+            variation="quiet"
+            required
+          />
+          <TextField
+            name="itemprice"
+            placeholder="Item Price"
+            label="Item Price"
             labelHidden
             variation="quiet"
             required
